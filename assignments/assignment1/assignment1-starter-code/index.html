@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
-      .success {color: green;}
-      .danger {color: red;}
     </style>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
@@ -17,7 +15,7 @@
      <h1>Lunch Checker</h1>
 
          <div class="form-group">
-         <label for="lunch-menu">* Empty items are NOT considered valid</label>
+         <label class="alert alert-info" for="lunch-menu">* Empty items are NOT considered valid</label>
              <input ng-model="lunchList" id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch *"
              class="form-control">
@@ -25,7 +23,7 @@
          <div class="form-group">
              <button ng-click="checkItems()" class="btn btn-default">Check If Too Much</button>
          </div>
-         <div class="form-group message" ng-class="messageClass">
+         <div class="form-group message alert" ng-class="messageClass">
            {{message}}
          </div>
    </div>

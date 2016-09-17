@@ -10,7 +10,7 @@
 	function LunchCheckController($scope) {
 		$scope.lunchList = "";
 		$scope.message = "";
-		$scope.messageClass = "success";
+		$scope.messageClass = "";
 
 		$scope.checkItems = function() {
 
@@ -43,7 +43,7 @@
 	}
 
 	function setMessageClass(success) {
-		return success ? "success" : "danger";
+		return success ? "alert-success" : "alert-danger";
 	}
 
 })();

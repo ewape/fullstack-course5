@@ -5,19 +5,10 @@
 	angular.module('MenuApp')
 
 	.component('categories', {
-		templateUrl: 'templates/categories.html',
+		templateUrl: 'templates/categories.component.html',
 		bindings: {
 			categories: '<'
 		}
-	})
-
-	.controller('categoriesController', categoriesController);
-
-	categoriesController.$inject = ['categories'];
-
-	function categoriesController(categories) {
-		var ctrl = this;
-		ctrl.categories = categories;
-	}
+	});
 
 })();

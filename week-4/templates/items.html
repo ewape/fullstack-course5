@@ -1,14 +1,2 @@
 <h2>Items</h2>
-<ul class="list-group">
-	<li class="list-group-item" ng-repeat="item in itemsCtrl.items">
-	<span class="badge">{{item.short_name}}</span>
-	<strong>{{item.name}}</strong><br>
-	<p ng-if="item.description">{{item.description}}</p>
-	<div ng-if="item.price_small">
-	<span ng-if="item.small_portion_name">{{item.small_portion_name}}</span><span ng-if="!item.small_portion_name">small</span>: <strong>${{item.price_small}}</strong>
-	</div>
-	<div ng-if="item.price_large">
-		<span ng-if="item.large_portion_name">{{item.large_portion_name}}</span><span ng-if="!item.large_portion_name">large</span>: <strong>${{item.price_large}}</strong>
-	</div>
-	</li>
-</ul>
+<items items="itemsCtrl.items"></items>
